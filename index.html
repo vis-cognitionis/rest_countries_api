@@ -30,8 +30,17 @@
         <div id="home-page" class="home-page">
 
             <div id="search-filter-container" class="search-filter-container">
-                <div id="search-area" class="search-area"></div>
-                <div id="filter-area" class="filter-area"></div>
+                <div id="search-area" class="search-area">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input id="search" class="search" type="text" placeholder="Search for a country..." />
+                </div>
+                <div id="filter-area" class="filter-area">
+
+                    <div class="select">
+                        <span>Filter by Region</span>
+                        <div class="select-icon"></div>
+                    </div>
+                </div>
             </div>
 
             <div id="country-cards" class="country-cards"></div>
@@ -43,5 +52,7 @@
 
 </body>
 <script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </html>
