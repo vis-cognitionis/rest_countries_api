@@ -72,6 +72,22 @@
     text-overflow: ellipsis;
 }
 
+.region-options {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: var(--dark-blue);
+}
+
+.region {
+    font-size: var(--font-size-home);
+    padding: 0.9rem;
+    padding-left: 1.2rem;
+}
+
 @media screen and (max-width:520px) {
     .search-filter-container {
         flex-direction: column;
