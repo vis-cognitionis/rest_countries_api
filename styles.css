@@ -4,7 +4,6 @@ body {
     justify-content: center;
     /* align-items: center; */
     overflow-x: hidden;
-    transition: 0.5s;
     color: var(--text-white);
     font-family: "Nunito Sans", sans-serif;
     margin: 0;
@@ -28,4 +27,16 @@ body {
     --border-radius: 0.5rem;
     --padding-x: 5em;
     --icon-width: 1.5rem;
+}
+
+@media screen and (max-width:520px) {
+    :root {
+        --padding-x: 3em;
+    }
+}
+
+@media screen and (max-width:600px) {
+    :root {
+        --padding-x: 2em;
+    }
 }

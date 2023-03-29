@@ -1,6 +1,5 @@
 .home-page {
     margin: 0 auto;
-    transition: 0.5s;
     max-width: 102rem;
     height: 100vh;
     padding: 0 var(--padding-x)
@@ -32,7 +31,6 @@
     border-radius: var(--border-radius);
     width: min(35rem, 100%);
     padding: 1em 2em;
-
 }
 
 .search {
@@ -68,6 +66,22 @@
     font-size: var(--font-size-home);
     font-weight: 300;
     pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width:520px) {
+    .search-filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .search-area {
+        width: 80%;
+    }
 }
 
 ion-icon {
