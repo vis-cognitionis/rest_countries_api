@@ -1,6 +1,7 @@
 const regionOptions = document.querySelector(".region-options");
 const filterArea = document.getElementById("filter-area");
 const allCountryCards = document.getElementById("country-cards");
+const loading = document.querySelector(".loader-container");
 
 filterArea.addEventListener("click", () => {
   regionOptions.classList.toggle("region-options-open");
@@ -15,13 +16,15 @@ document.addEventListener("click", (event) => {
 
 let countryCards = [];
 
+//Required to load data from API with GET method
 fetch("https://restcountries.com/v3.1/all")
   .then((res) => res.json())
   .then((data) => {
     countryCards = data;
-    countryCards.forEach((country) => {
-      console.log(country);
-      allCountryCards.innerHTML += `<div class="country-card">
+    loading.style.display = "none";
+    allCountryCards.innerHTML = countryCards
+      .map((country) => {
+        return `<div class="country-card">
     <div class="country-flag-container">
    <img class="country-flag" src=${country.flags.svg}>
     </div>
@@ -39,7 +42,7 @@ fetch("https://restcountries.com/v3.1/all")
      <div class="country-info-row">
 <strong>Capital:</strong> ${country.capital}  </div>
 </div>
-
     </div>`;
-    });
+      })
+      .join("");
   });

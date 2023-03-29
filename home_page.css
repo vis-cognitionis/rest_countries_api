@@ -54,12 +54,9 @@ span {
     font-size: var(--font-size-home);
 }
 
-/* @media screen and (max-width:752px) {
-    #country-cards {
-        justify-items: center;
-    }
-
-} */
+strong {
+    font-size: var(--font-size-home);
+}
 
 ion-icon {
     font-size: 20px;
