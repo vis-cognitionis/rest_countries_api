@@ -1,3 +1,19 @@
+.home-page {
+    margin: 0 auto;
+    transition: 0.5s;
+    max-width: 102rem;
+    height: 100vh;
+    padding: 0 var(--padding-x)
+}
+
+
+#main {
+    width: 100%;
+    padding: 2em 0;
+    max-width: 102rem;
+
+}
+
 .search-filter-container {
     display: flex;
     justify-content: space-between;
