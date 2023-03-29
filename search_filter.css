@@ -40,7 +40,7 @@
 .filter-area {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     gap: 3rem;
@@ -67,16 +67,18 @@
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     background-color: var(--dark-blue);
+    top: 3.6rem;
+    align-self: center;
+    padding-bottom: 0.8rem;
 }
 
 .region-options-open {
     display: block;
-
 }
 
 .region {
     font-size: var(--font-size-home);
-    padding: 0.9rem;
+    padding-top: 0.8rem;
     padding-left: 1.2rem;
 }
 
