@@ -12,10 +12,9 @@
     text-align: center;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     width: 100%;
-    padding: 2em 0;
-    max-width: 102rem;
+    padding: 3em 0;
+    gap: 5rem;
 }
-
 
 .country-card {
     background-color: var(--dark-blue);
@@ -23,6 +22,22 @@
     overflow: hidden;
     cursor: pointer;
     box-shadow: var(--box-shadow);
+
+}
+
+.country-infos {
+    padding: 1em 1.3em 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem
+}
+
+.country-info-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3em;
 }
 
 .country-flag-container {
@@ -30,35 +45,21 @@
 }
 
 .country-flag {
-    height: 100%;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.country-name {
-    font-size: var(--font-size-home);
-    margin-bottom: 1em;
-}
-
 span {
-    font-weight: 300;
+    font-size: var(--font-size-home);
 }
 
-strong {
-    font-weight: 600;
-}
-
-@media screen and (max-width: 896px) {
+/* @media screen and (max-width:752px) {
     #country-cards {
-        gap: 3rem;
+        justify-items: center;
     }
-}
 
-@media screen and (max-width: 573px) {
-    #country-cards {
-        grid-template-columns: min(20rem, 100%);
-    }
-}
+} */
 
 ion-icon {
     font-size: 20px;

@@ -23,24 +23,23 @@ fetch("https://restcountries.com/v3.1/all")
       console.log(country);
       allCountryCards.innerHTML += `<div class="country-card">
     <div class="country-flag-container">
-    <img class"country-flag" src=${country.flags.svg}>
+   <img class="country-flag" src=${country.flags.svg}>
     </div>
 
-    <div class="country-infos">
+  <div class="country-infos">
     <h3 class="country-name">${country.name.common}</h3>
-    <span><strong>
-    Population: 
-    </strong>${country.population}</span> 
-    <br>
-    <span><strong>
-    Region: 
-    </strong>${country.region}</span> 
-    <br>
-    <span><strong>
-    Capital: 
-    </strong>${country.capital}</span> 
+    <div class="country-info-row">
+        <strong>Population:</strong>
+  <span>${country.population.toLocaleString()}</span>
     </div>
-  
+    <div class="country-info-row">
+        <strong>Region:</strong>
+        <span>${country.region}</span>
+    </div>
+     <div class="country-info-row">
+<strong>Capital:</strong> ${country.capital}  </div>
+</div>
+
     </div>`;
     });
   });
