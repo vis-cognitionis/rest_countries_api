@@ -6,9 +6,15 @@
 }
 
 #main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     width: 100%;
     padding: 2em 0;
     max-width: 102rem;
+    border: 2px solid green;
 }
 
 ion-icon {
