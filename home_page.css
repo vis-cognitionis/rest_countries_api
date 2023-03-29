@@ -23,12 +23,22 @@
 }
 
 .search {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: var(--text-white);
     width: 100%;
     border: none;
     outline: none;
     background-color: var(--dark-blue);
+}
+
+.search::placeholder {
+    color: var(--text-white);
+    font-size: 1rem;
+}
+
+.filter-area {
+    position: relative;
+    width: min(25rem, 100%);
 }
 
 ion-icon {
