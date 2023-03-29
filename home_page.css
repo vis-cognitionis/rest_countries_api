@@ -5,7 +5,7 @@
     padding: 0 var(--padding-x)
 }
 
-#main {
+#country-cards {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,50 @@
     width: 100%;
     padding: 2em 0;
     max-width: 102rem;
-    border: 2px solid green;
+}
+
+
+.country-card {
+    background-color: var(--dark-blue);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+
+.country-flag-container {
+    height: 12rem;
+}
+
+.country-flag {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.country-name {
+    font-size: var(--font-size-home);
+    margin-bottom: 1em;
+}
+
+span {
+    font-weight: 300;
+}
+
+strong {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 896px) {
+    #country-cards {
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 573px) {
+    #country-cards {
+        grid-template-columns: min(20rem, 100%);
+    }
 }
 
 ion-icon {
