@@ -6,12 +6,10 @@
     padding: 0 var(--padding-x)
 }
 
-
 #main {
     width: 100%;
     padding: 2em 0;
     max-width: 102rem;
-
 }
 
 .search-filter-container {
@@ -19,7 +17,6 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    padding: 2em 0;
     margin: 6.77rem auto 0;
     width: 100%;
     max-width: 102rem;
@@ -34,12 +31,13 @@
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     width: min(35rem, 100%);
-    padding: 1.5em 2em;
+    padding: 1em 2em;
 
 }
 
 .search {
-    font-size: 1rem;
+    font-size: var(--font-size-home);
+    font-weight: 300;
     color: var(--text-white);
     width: 100%;
     border: none;
@@ -49,12 +47,27 @@
 
 .search::placeholder {
     color: var(--text-white);
-    font-size: 1rem;
+    font-size: var(--font-size-home);
+    font-weight: 300;
 }
 
 .filter-area {
     position: relative;
-    width: min(25rem, 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: min(10rem, 100%);
+    padding: 1em 2em;
+    background-color: var(--dark-blue);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
+.filter-area span {
+    font-size: var(--font-size-home);
+    font-weight: 300;
+    pointer-events: none;
 }
 
 ion-icon {

@@ -5,17 +5,13 @@ header {
     top: 0;
     background-color: var(--dark-blue);
     box-shadow: var(--box-shadow);
-}
-
-.header {
-    width: 100%;
-    max-width: 102rem;
+    padding: 0.2em var(--padding-x);
+    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
-    padding: 2em var(--padding-x);
-    margin: 0 auto;
 }
 
+
 .header-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
