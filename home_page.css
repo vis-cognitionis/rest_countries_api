@@ -1,0 +1,36 @@
+.search-filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2em 0;
+    margin: 6.77rem auto 0;
+    width: 100%;
+    max-width: 102rem;
+}
+
+.search-area {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: var(--dark-blue);
+    gap: 1em;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    width: min(35rem, 100%);
+    padding: 1.5em 2em;
+
+}
+
+.search {
+    font-size: 1.3rem;
+    color: var(--text-white);
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--dark-blue);
+}
+
+ion-icon {
+    font-size: 20px;
+}

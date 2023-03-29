@@ -1,3 +1,30 @@
-ion-icon {
-    font-size: 32px;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    transition: 0.5s;
+    color: var(--text-white);
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    /* colors & styles */
+    --dark-blue: hsl(209, 23%, 22%);
+    --very-dark-blue: hsl(207, 26%, 17%);
+    --text-white: hsl(0, 0%, 100%);
+
+    /* typography */
+    --font-size-home: 14px;
+    --font-size-detail: 16px;
+
+    /* other styles */
+    --box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+    --border-radius: 0.5rem;
+    --padding-x: 5em;
+    --icon-width: 1.5rem;
 }
