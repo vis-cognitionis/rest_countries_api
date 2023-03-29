@@ -29,8 +29,9 @@
     gap: 1em;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
-    width: min(35rem, 100%);
+    width: min(27rem, 100%);
     padding: 1em 2em;
+    box-sizing: border-box;
 }
 
 .search {
@@ -55,8 +56,8 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    width: min(10rem, 100%);
-    padding: 1em 2em;
+    gap: 3rem;
+    padding: 1em 1em;
     background-color: var(--dark-blue);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
@@ -78,9 +79,10 @@
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:300px) {
     .search-area {
-        width: 80%;
+        min-width: 15rem;
+        width: 15rem;
     }
 }
 
