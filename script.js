@@ -1,8 +1,14 @@
-const regionOptions = document.querySelector(".region-options");
-const filterArea = document.getElementById("filter-area");
-const allCountryCards = document.getElementById("country-cards");
-const loading = document.querySelector(".loader-container");
+//Required variables
+const regionOptions = document.querySelector(".region-options"),
+  filterArea = document.getElementById("filter-area"),
+  allCountryCards = document.getElementById("country-cards"),
+  loading = document.querySelector(".loader-container"),
+  regions = document.getElementsByClassName("region"),
+  countryCard = document.getElementsByClassName("country-card"),
+  search = document.getElementById("search");
+let countryCards = [];
 
+//Required to toggle options in the filter field
 filterArea.addEventListener("click", () => {
   regionOptions.classList.toggle("region-options-open");
 });
@@ -14,19 +20,23 @@ document.addEventListener("click", (event) => {
   }
 });
 
-let countryCards = [];
-
 //Required to load data from API with GET method
 fetch("https://restcountries.com/v3.1/all")
   .then((res) => res.json())
   .then((data) => {
     countryCards = data;
     loading.style.display = "none";
-    allCountryCards.innerHTML = countryCards
+    showCountryCards(countryCards);
+  });
+
+const showCountryCards = (countries) => {
+  if (countries.length > 0) {
+    allCountryCards.innerHTML = countries
       .map((country) => {
         return `<div class="country-card">
     <div class="country-flag-container">
-   <img class="country-flag" src=${country.flags.svg}>
+   <img class="country-flag" src=${country.flags.svg}
+   loading="lazy">
     </div>
 
   <div class="country-infos">
@@ -40,9 +50,32 @@ fetch("https://restcountries.com/v3.1/all")
         <span>${country.region}</span>
     </div>
      <div class="country-info-row">
-<strong>Capital:</strong> ${country.capital}  </div>
+  <strong>Capital:</strong>
+   <span> ${country.capital}</span>  </div>
 </div>
     </div>`;
       })
       .join("");
+  } else {
+    allCountryCards.innerHTML = "<p class='not-found-message'>No result!</p>";
+  }
+};
+
+//Required to filter regions on homepage
+for (let i = 0; i < regions.length; i++) {
+  regions[i].addEventListener("click", () => {
+    const filteredCards = countryCards.filter(
+      (country) => country.region === regions[i].textContent
+    );
+    showCountryCards(filteredCards);
   });
+}
+
+//Required to search countries on homepage
+search.addEventListener("keyup", () => {
+  const searchString = search.value.toLowerCase();
+  const filteredCards = countryCards.filter((country) =>
+    country.name.common.toLowerCase().includes(searchString)
+  );
+  showCountryCards(filteredCards);
+});

@@ -33,14 +33,15 @@
             <div id="search-filter-container" class="search-filter-container">
                 <div id="search-area" class="search-area">
                     <ion-icon name="search-outline"></ion-icon>
-                    <input id="search" class="search" type="text" placeholder="Search for a country..." />
+                    <input id="search" class="search" type="text" placeholder="Search for a country..."
+                        autocomplete="off" />
                 </div>
                 <div id="filter-area" class="filter-area">
                     <span>Filter by Region</span>
                     <ion-icon name="chevron-down-outline"></ion-icon>
                     <div class="region-options">
                         <div class="region">Africa</div>
-                        <div class="region">America</div>
+                        <div class="region">Americas</div>
                         <div class="region">Asia</div>
                         <div class="region">Europe</div>
                         <div class="region">Oceania</div>
@@ -52,9 +53,8 @@
                 <img class="loader" src="loading/loader.gif" alt="loading..." />
             </div>
             <div id="country-cards"></div>
-
-
         </div>
+
         <div id="detail-page" class="detail-page"></div>
     </main>
 

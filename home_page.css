@@ -22,7 +22,11 @@
     overflow: hidden;
     cursor: pointer;
     box-shadow: var(--box-shadow);
+    max-height: 402px;
+}
 
+.country-name {
+    text-align: left;
 }
 
 .country-infos {
@@ -56,6 +60,13 @@ span {
 
 strong {
     font-size: var(--font-size-home);
+}
+
+.not-found-message {
+    text-align: left;
+    font-size: var(--font-size-home);
+    margin: 0;
+    padding-left: 1rem;
 }
 
 ion-icon {
