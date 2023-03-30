@@ -1,4 +1,4 @@
-//Required variables
+//Required variables for homepage
 const regionOptions = document.querySelector(".region-options"),
   filterArea = document.getElementById("filter-area"),
   allCountryCards = document.getElementById("country-cards"),
@@ -7,6 +7,9 @@ const regionOptions = document.querySelector(".region-options"),
   countryCard = document.getElementsByClassName("country-card"),
   search = document.getElementById("search");
 let countryCards = [];
+
+//Required variabled for detailpage
+const detailPage = document.getElementById("detail-page");
 
 //Required to toggle options in the filter field
 filterArea.addEventListener("click", () => {
