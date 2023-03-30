@@ -11,11 +11,20 @@ let countryCards = [];
 
 //Required variabled for detailpage
 const detailPage = document.getElementById("detail-page"),
-  detailFlag = document.getElementById("detail-flag"),
-  borderCountries = document.getElementById("border-countries"),
-  countryName = document.getElementById("country-name"),
   info1 = document.getElementsByClassName("info-1"),
-  info2 = document.getElementsByClassName("info-2");
+  info2 = document.getElementsByClassName("info-2"),
+  detailFlag = document.querySelector("#detail-flag"),
+  countryName = document.querySelector("#country-name"),
+  nativeName = document.querySelector("#native-name"),
+  capital = document.querySelector("#capital"),
+  population = document.querySelector("#population"),
+  region = document.querySelector("#region"),
+  subregion = document.querySelector("#subregion"),
+  languages = document.querySelector("#languages"),
+  currencies = document.querySelector("#currencies"),
+  topLevelDomain = document.querySelector("#top-level-domain"),
+  borderCountries = document.querySelector("#border-countries"),
+  backButton = document.querySelector("#back-button");
 
 //Required to toggle options in the filter field
 filterArea.addEventListener("click", () => {
@@ -86,21 +95,9 @@ const showCountryCards = (countries) => {
   }
 };
 
-function showDetailPage(country) {
+const showDetailPage = (country) => {
   homePage.style.display = "none";
   detailPage.style.display = "block";
-
-  const detailFlag = document.querySelector("#detail-flag"),
-    countryName = document.querySelector("#country-name"),
-    nativeName = document.querySelector("#native-name"),
-    capital = document.querySelector("#capital"),
-    population = document.querySelector("#population"),
-    region = document.querySelector("#region"),
-    subregion = document.querySelector("#subregion"),
-    languages = document.querySelector("#languages"),
-    currencies = document.querySelector("#currencies"),
-    topLevelDomain = document.querySelector("#top-level-domain"),
-    borderCountries = document.querySelector("#border-countries");
 
   nativeName.textContent = country.name.common;
   detailFlag.src = country.flags.svg;
@@ -110,9 +107,16 @@ function showDetailPage(country) {
   region.textContent = country.region;
   subregion.textContent = country.subregion;
   languages.textContent = Object.values(country.languages).join(", ");
-  currencies.textContent = Object.values(country.currencies).join(", ");
+  currencies.textContent = Object.values(country.currencies)
+    .map((currency) => currency.name)
+    .join(", ");
   topLevelDomain.textContent = country.tld.join(", ");
-}
+};
+
+backButton.addEventListener("click", () => {
+  detailPage.style.display = "none";
+  homePage.style.display = "block";
+});
 
 //Required to filter regions on homepage
 for (let i = 0; i < regions.length; i++) {
