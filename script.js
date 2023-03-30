@@ -21,13 +21,19 @@ document.addEventListener("click", (event) => {
 });
 
 //Required to load data from API with GET method
-fetch("https://restcountries.com/v3.1/all")
-  .then((res) => res.json())
-  .then((data) => {
+const getData = async () => {
+  try {
+    const response = await fetch("https://restcountries.com/v3.1/all");
+    const data = await response.json();
     countryCards = data;
     loading.style.display = "none";
     showCountryCards(countryCards);
-  });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+getData();
 
 const showCountryCards = (countries) => {
   if (countries.length > 0) {
