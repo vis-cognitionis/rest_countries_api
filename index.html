@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="home_page.css" />
     <link rel="stylesheet" href="search_filter.css" />
+    <link rel="stylesheet" href="detail_page.css" />
 </head>
 
 <body>
@@ -64,22 +65,30 @@
                 </div>
 
                 <div class="detail-container">
-                    <img src="" alt="" id="detail-flag" class="detail-flag" />
+                    <img src="" alt="" id="detail-flag" class="detail-flag" draggable="false" />
                     <div class="infos-container">
                         <h2 id="country-name"></h2>
                         <div class="infos">
                             <div class="part-1">
-                                <span class="info-1"></span>
-                                <span class="info-1"></span>
-                                <span class="info-1"></span>
-                                <span class="info-1"></span>
-                                <span class="info-1"></span>
+                                <span class="info-1" data-title="Native Name"><span class="info"
+                                        id="native-name"></span></span>
+                                <span class="info-1" data-title="Population"> <span class="info"
+                                        id="population"></span></span>
+                                <span class="info-1" data-title="Region"> <span class="info" id="region"></span></span>
+                                <span class="info-1" data-title="Sub Region"> <span class="info"
+                                        id="subregion"></span></span>
+                                <span class="info-1" data-title="Capital"> <span class="info"
+                                        id="capital"></span></span>
                             </div>
                             <div class="part-2">
-                                <span class="info-2"></span>
-                                <span class="info-2"></span>
-                                <span class="info-2"></span>
+                                <span class="info-2" data-title="Top Level Domain"><span class="info"
+                                        id="top-level-domain"></span></span>
+                                <span class="info-2" data-title="Currencies"> <span class="info"
+                                        id="currencies"></span></span>
+                                <span class="info-2" data-title="Languages"> <span class="info"
+                                        id="languages"></span></span>
                             </div>
+
                             <div id="border-countries" class="border-countries"></div>
                         </div>
                     </div>
