@@ -1,3 +1,5 @@
+const headerTitle = document.getElementById("header-title");
+
 //Required variables for homepage
 const regionOptions = document.querySelector(".region-options"),
   homePage = document.getElementById("home-page"),
@@ -153,4 +155,9 @@ search.addEventListener("keyup", () => {
     country.name.common.toLowerCase().includes(searchString)
   );
   showCountryCards(filteredCards);
+});
+
+//Required to return unfiltered results
+headerTitle.addEventListener("click", () => {
+  showCountryCards(countryCards);
 });
