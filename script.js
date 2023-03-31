@@ -11,7 +11,7 @@ const regionOptions = document.querySelector(".region-options"),
   search = document.getElementById("search");
 let countryCards = [];
 
-//Required variabled for detailpage
+//Required variables for detailpage
 const detailPage = document.getElementById("detail-page"),
   info1 = document.getElementsByClassName("info-1"),
   info2 = document.getElementsByClassName("info-2"),
@@ -161,4 +161,6 @@ search.addEventListener("input", () => {
 //Required to return unfiltered results
 headerTitle.addEventListener("click", () => {
   showCountryCards(countryCards);
+  detailPage.style.display = "none";
+  homePage.style.display = "block";
 });
