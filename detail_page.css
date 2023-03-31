@@ -59,6 +59,9 @@
     margin-bottom: 0.5rem;
     font-size: var(--font-size-detail);
     color: var(--text-white);
+}
+
+.info-1 {
     white-space: nowrap;
 }
 
@@ -119,6 +122,12 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 1320px) {
+    .border-countries-list {
+        max-width: 50%;
+    }
+}
+
 @media screen and (max-width: 1260px) {
     .detail-flag {
         width: 32rem
@@ -161,6 +170,8 @@
     .infos {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+
 }
 
 @media screen and (max-width: 600px) {
