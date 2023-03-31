@@ -127,7 +127,7 @@ const showDetailPage = (country) => {
     });
   } else {
     borderCountriesList.innerHTML =
-      "<p style='font-weight:normal' >No border countries found.</p>";
+      "<p style='font-weight:normal; margin:0' >No border countries found.</p>";
   }
 };
 

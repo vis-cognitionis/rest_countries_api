@@ -94,6 +94,7 @@
     cursor: pointer;
     color: var(--text-white);
     font-size: var(--font-size-detail);
+    white-space: nowrap;
 }
 
 #border-countries-title {
