@@ -116,7 +116,7 @@ const showDetailPage = (country) => {
 
   if (country.borders) {
     country.borders.forEach((border) => {
-      const button = document.createElement("button");
+      const button = document.createElement("div");
       const borderCountry = countryCards.find((item) => item.cca3 === border);
       button.textContent = borderCountry.name.common;
       button.addEventListener("click", () => {
