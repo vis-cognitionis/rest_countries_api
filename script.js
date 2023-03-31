@@ -85,7 +85,6 @@ const showCountryCards = (countries) => {
       })
       .join("");
 
-    //Required to navigate to the relevant detail page according to the clicked country card
     const filteredCountryCards = Array.from(allCountryCards.children);
     filteredCountryCards.forEach((countryCard, i) => {
       countryCard.addEventListener("click", () => {
@@ -98,6 +97,7 @@ const showCountryCards = (countries) => {
   }
 };
 
+//Required to go to the detail page with country information
 const showDetailPage = (country) => {
   homePage.style.display = "none";
   detailPage.style.display = "block";
@@ -133,6 +133,7 @@ const showDetailPage = (country) => {
   }
 };
 
+//Required to return to home page with country cards
 backButton.addEventListener("click", () => {
   detailPage.style.display = "none";
   homePage.style.display = "block";
