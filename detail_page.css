@@ -74,7 +74,7 @@
 .border-countries {
     display: flex;
     flex-direction: row;
-    font-weight: 600;
+    font-weight: bold;
     column-gap: 1.5rem;
 }
 
@@ -119,6 +119,12 @@
     cursor: pointer;
 }
 
+@media screen and (min-width: 1440px) {
+    .detail-page {
+        padding: 8rem 10rem 6rem;
+    }
+}
+
 @media screen and (max-width: 1320px) {
     .border-countries-list {
         max-width: 50%;
@@ -131,11 +137,6 @@
     }
 }
 
-@media screen and (min-width: 1440px) {
-    .detail-page {
-        padding: 8rem 10rem 6rem;
-    }
-}
 
 @media screen and (max-width: 1200px) {
     .detail-page {
@@ -203,9 +204,6 @@
 }
 
 @media screen and (max-width: 470px) {
-    .back-button {
-        font-size: 0.6rem;
-    }
 
     .infos {
         grid-template-columns: 1fr;
