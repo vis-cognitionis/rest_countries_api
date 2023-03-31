@@ -14,8 +14,7 @@
     height: 20rem;
     margin-right: 4rem;
     object-fit: cover;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow)
 }
 
 .infos-container {
@@ -65,4 +64,14 @@
 .border-countries {
     margin-top: 2rem;
     font-weight: 600;
+}
+
+button {
+    background-color: yellow;
+}
+
+#border-countries-title {
+    font-weight: bold;
+    color: var(--text-white);
+    font-size: var(--font-size-detail);
 }

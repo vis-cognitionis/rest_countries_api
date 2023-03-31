@@ -24,7 +24,8 @@ const detailPage = document.getElementById("detail-page"),
   currencies = document.querySelector("#currencies"),
   topLevelDomain = document.querySelector("#top-level-domain"),
   borderCountries = document.querySelector("#border-countries"),
-  backButton = document.querySelector("#back-button");
+  backButton = document.querySelector("#back-button"),
+  borderCountriesList = document.getElementById("border-countries-list");
 
 //Required to toggle options in the filter field
 filterArea.addEventListener("click", () => {
@@ -111,6 +112,23 @@ const showDetailPage = (country) => {
     .map((currency) => currency.name)
     .join(", ");
   topLevelDomain.textContent = country.tld.join(", ");
+  borderCountriesList.innerHTML = "";
+
+  if (country.borders) {
+    country.borders.forEach((border) => {
+      const button = document.createElement("button");
+      const borderCountry = countryCards.find((item) => item.cca3 === border);
+      button.textContent = borderCountry.name.common;
+      button.addEventListener("click", () => {
+        const clickedBorder = countryCards.find((item) => item.cca3 === border);
+        showDetailPage(clickedBorder);
+      });
+      borderCountriesList.appendChild(button);
+    });
+  } else {
+    borderCountriesList.innerHTML =
+      "<p style='font-weight:normal' >No border countries found.</p>";
+  }
 };
 
 backButton.addEventListener("click", () => {
