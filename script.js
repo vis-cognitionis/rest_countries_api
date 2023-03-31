@@ -150,7 +150,7 @@ for (let i = 0; i < regions.length; i++) {
 }
 
 //Required to search countries on homepage
-search.addEventListener("keyup", () => {
+search.addEventListener("input", () => {
   const searchString = search.value.toLowerCase();
   const filteredCards = countryCards.filter((country) =>
     country.name.common.toLowerCase().includes(searchString)
