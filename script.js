@@ -122,8 +122,7 @@ const showDetailPage = (country) => {
       const borderCountry = countryCards.find((item) => item.cca3 === border);
       button.textContent = borderCountry.name.common;
       button.addEventListener("click", () => {
-        const clickedBorder = countryCards.find((item) => item.cca3 === border);
-        showDetailPage(clickedBorder);
+        showDetailPage(borderCountry);
       });
       borderCountriesList.appendChild(button);
     });
